@@ -4,12 +4,11 @@
 // Задание 1
 // Так и не смог придумать, как 111, 1111 и т.д. выводить как "товаров"(
 function goodsCount (count) {
-    if ((count === 1) || (count > 20 && (count % 10) === 1)) return console.log(count, "товар");
-    if ((count % 10) > 1 && (count % 10) <= 4) return console.log(count, "товара");
-    else return console.log(count, "товаров");
-
+    if ((count === 1) || (count > 20 && (count % 10) === 1)) return `${count} товар`;
+    if ((count % 10) > 1 && (count % 10) <= 4) return `${count} товара`;
+    else return `${count} товаров`;
 }
-goodsCount(parseInt(prompt("Введите кол-во товаров")));
+console.log(goodsCount(parseInt(prompt("Введите кол-во товаров"))));
 
 
 // Задание 2
