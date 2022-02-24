@@ -19,22 +19,21 @@ console.log(usersFromCity);
 
 
 // Задание 2
-/*
-let words = ["cat", "rat", "dog", "racoon", "cat", "dog", "sheep", "cat"], word = "cat", count = 0;
-let repeats = new Map()
 
-let wordRepeat = (arr, word) => {
+let words = ["cat", "rat", "dog", "racoon", "cat", "dog", "sheep", "cat"];
+
+function getMap(arr) {
+    let map = new Map();
     for (let elem of arr) {
-        if (elem === elem) console.log(elem);
+        if (map.has(elem)) {
+            map.set(elem, map.get(elem)+1)
+        } else {
+            map.set(elem, 1);
+        }
     }
+    console.log(map);
 }
-wordRepeat(words, word)
-console.log(repeats.set(word, count));
-let repeatWords = words.map(elem => {
-    if (elem === elem) return elem
-});
-console.log(repeatWords)
-*/
+getMap(words)
 
 
 // Задание 3
